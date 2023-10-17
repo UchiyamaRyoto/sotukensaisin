@@ -1,0 +1,35 @@
+sudo apt install php7.4-bcmath php7.4-mbstring php7.4-xml php7.4-zip unzip 
+①WSLインストール
+Microsoft StoreでUbuntuをインストール
+①phpインストール
+ubuntuで
+sudo apt-get update
+sudo apt install -y php
+③MySQLのインストール
+sudo apt install mysql-client
+sudo apt isntall php7.4-mysql
+.env編集
+DB_CONNECTION=mysql
+DB_HOST=0.0.0.0
+DB_PORT=3306
+DB_DATABASE=sotusei
+DB_USERNAME=root
+DBPASSWORD=maru
+migrate実行
+php artisan migrate
+④laravelのインストール
+sudo apt install 
+⑤composerのインストール
+curl https://getcomposer.org/installer | php
+
+⑥composerの適用
+sudo apt install composer
+composer install
+⑦Remote SSH
+vscodeでRemote SSHインストール
+(公開鍵認証にすべきか？)
+⑧WSLをマウントする
+フォルダで //wsl$と検索
+パスをコピー
+ネットワークで右クリック
+ネットワークドライバの割り当てでパスをペースト
