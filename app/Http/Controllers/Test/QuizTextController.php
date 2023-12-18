@@ -21,4 +21,6 @@ class QuizTextController extends Controller
         $tes = test::all();
         return view('test.test', compact('tes'));
     }
+
+    
 }

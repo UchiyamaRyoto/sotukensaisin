@@ -48,11 +48,12 @@ class CreateTestTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('tensu');
-            $table->text('questionText');
-            $table->datetime('updTime');
+            $table->text('content')->comment('投稿内容');
+            $table->unsignedTinyInteger('deleted_flag')->default(0)->comment('削除フラグ デフォルト：0 削除：1');
+            $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

@@ -14,8 +14,10 @@ class test extends Model
         "id"
         ,"name"
         ,"tensu"
-        ,"questionText"
-        ,"updTime"
+        ,"content"
+        ,"deleted_flag"
+        ,"created_at"
+        ,"updated_at"
     ];
 
     public function user()

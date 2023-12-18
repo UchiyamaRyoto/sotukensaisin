@@ -12,8 +12,10 @@
                                 <div class="portfolio-caption-heading">{{ $tes->id }}</div>
                                 <div class="portfolio-caption-heading">{{ $tes->name }}</div>
                                 <div class="portfolio-caption-heading">{{ $tes->tensu }}</div>
-                                <div class="portfolio-caption-heading">{{ $tes->questionText }}</div>
-                                <div class="portfolio-caption-heading">{{ $tes->updTime }}</div>
+                                <div class="portfolio-caption-heading">{{ $tes->content }}</div>
+                                <div class="portfolio-caption-heading">{{ $tes->deleted_flag }}</div>
+                                <div class="portfolio-caption-heading">{{ $tes->created_at }}</div>
+                                <div class="portfolio-caption-heading">{{ $tes->updated_at }}</div>
                             </div>
                         </div>
                     </div>
