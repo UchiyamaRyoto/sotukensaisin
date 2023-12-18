@@ -29,4 +29,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'index'])->name('test');
+Route::get('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'index'])->name('test.index');
+Route::post('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'store'])->name('test.store');
+

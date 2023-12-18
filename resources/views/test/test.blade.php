@@ -1,26 +1,85 @@
 <section class="page-section bg-light" id="portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">テーブル</h2>
-                </div>
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">テーブル</h2>
+        </div>
 
-                <div class="row">
-                    @foreach($tes as $test)
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item" style="text-align:center">
-                            <div class="portfolio-caption" style="margin-top:10px">
-                                <div class="portfolio-caption-heading">{{ $tes->id }}</div>
-                                <div class="portfolio-caption-heading">{{ $tes->name }}</div>
-                                <div class="portfolio-caption-heading">{{ $tes->tensu }}</div>
-                                <div class="portfolio-caption-heading">{{ $tes->content }}</div>
-                                <div class="portfolio-caption-heading">{{ $tes->deleted_flag }}</div>
-                                <div class="portfolio-caption-heading">{{ $tes->created_at }}</div>
-                                <div class="portfolio-caption-heading">{{ $tes->updated_at }}</div>
-                            </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered" border="1">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Tensu</th>
+                                <th>Content</th>
+                                <th>Deleted Flag</th>
+                                <th>Created At</th>
+                                <th>Updated At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($tes as $tes)
+                            <tr>
+                                <td>{{ $tes->id }}</td>
+                                <td>{{ $tes->name }}</td>
+                                <td>{{ $tes->tensu }}</td>
+                                <td>{{ $tes->content }}</td>
+                                <td>{{ $tes->deleted_flag }}</td>
+                                <td>{{ $tes->created_at }}</td>
+                                <td>{{ $tes->updated_at }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    <form method="POST" id="insert" action="{{route('test.store')}}">
+                    @csrf
+                        <p>INSERT</p>
+                        <div>
+                        <label for="form-name">Name</label>
+                        <input type="text" name="name" id="form-name" required>
                         </div>
-                    </div>
-                    @endforeach
-                </div>
 
+                        <div>
+                        <label for="form-tel">Tensu</label>
+                        <input type="text" name="tensu" id="form-tensu">
+                        </div>
+
+                        <div>
+                        <label for="form-email">Content</label>
+                        <input type="text" name="content" id="form-content">
+                        </div>
+
+                        <button type="submit" name="insert">登録</button>
+
+                    </form>
+                    <form method="POST" id="update" action="{{route('test.store')}}">
+                    @csrf
+                        <p>UPDATE</p>
+                        <div>
+                        <label for="form-id">Id</label>
+                        <input type="text" name="id" id="form-id">
+                        <div>
+                        <label for="form-name">Name</label>
+                        <input type="text" name="name" id="form-name" required>
+                        </div>
+
+                        <div>
+                        <label for="form-tel">Tensu</label>
+                        <input type="text" name="tensu" id="form-tensu">
+                        </div>
+
+                        <div>
+                        <label for="form-email">Content</label>
+                        <input type="text" name="content" id="form-content">
+                        </div>
+
+                        <button type="submit" name="update">変更</button>
+
+                    </form>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>

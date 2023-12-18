@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Test;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\test;
+use Carbon\Carbon;
 
 //php artisan make:controller Test/HelloController フォルダごとコントローラ作成
 
@@ -22,5 +23,48 @@ class QuizTextController extends Controller
         return view('test.test', compact('tes'));
     }
 
+    public function post(Request $request)
+    {
+        if ($request->has('insert')){
+            $this->store($request);
+        }elseif ($request->has('update')){
+            $this->update($request);
+        }
+    }
+
+    public function store(Request $request)
+    {
+        $now = Carbon::now();
+
+        $tes = new test;
+
+        $tes->name=$request->input('name');
+        $tes->tensu=$request->input('tensu');
+        $tes->content=$request->input('content');
+        $tes->deleted_flag=0;
+        $tes->created_at=$now;
+        $tes->updated_at=$now;
+
+        $tes->save();
+
+        return redirect('test');
+
+    }
+
+    public function update($id)
+    {
+        $now = Carbon::now();
+
+        $tes = test::find($request->input('id'));
+
+        $tes->name=$request->input('name');
+        $tes->tensu=$request->input('name');
+        $tes->content=$request->input('content');
+        $tes->updated_at= $now;
+
+        $tes->save();
+
+        return redirect('test');
+    }
     
 }

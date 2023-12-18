@@ -1,7 +1,15 @@
 <?php
 
 namespace Database\Seeders;
+/*
+php artisan make:seeder aaaa　seederの作成
+php artisan db:seed　seederの実行
 
+use Carbon\Carbon　DateTimeクラス
+use lluminate\Support\Facades\DB　DBファザード
+
+
+*/
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
