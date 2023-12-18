@@ -16,7 +16,7 @@ class test extends Seeder
         DB::table('test')->insert([
             'name' => 'test'
             ,'tensu' => '80'
-            ,'questionText' => 'aaaaa?'
-        ])
+            ,'questionText' => 'aaaaa'
+        ]);
     }
 }
