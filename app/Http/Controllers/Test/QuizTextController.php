@@ -66,6 +66,4 @@ class QuizTextController extends Controller
 
         return redirect('test');
     }
-
-    public function
 }
