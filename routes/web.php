@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('test/test');
+    return view('test.testIchiran');
 });
 
 Auth::routes();
@@ -32,3 +32,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'index'])->name('test.index');
 Route::post('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'store'])->name('test.store');
 
+Route::get('/test2' , [App\Http\Controllers\Test\testIchiranController::class, 'index'])->name('test2.index');
