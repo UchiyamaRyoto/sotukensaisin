@@ -1,0 +1,44 @@
+.box2 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.box2 p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 矢印回転 */
+.box2 {
+	font-weight: bold;
+	line-height: 42px;
+	margin: 0;
+	padding: 0 0 0 10px;
+	position: relative;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.box2:hover {
+	color: #fd7e00;
+}
+.box2:after {
+	content: "";
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background:url(btn_arrow.png) no-repeat right top;
+	position:absolute;
+	top: 50%;
+	right: 7px;
+	transform: translateY(-50%);
+	transition: 0.2s;
+}
+.box2.selected:after {
+	transform: translateY(-50%) rotate(180deg);
+	transition: 0.2s;
+}
+
