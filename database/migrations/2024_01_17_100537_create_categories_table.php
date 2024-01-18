@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQuestionCollectionsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateQuestionCollectionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('question_collections', function (Blueprint $table) {
-            $table->id();
-            $table->string('question_collection_names');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->increments('category_id')->primary();
+            $table->string('category_names');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateQuestionCollectionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question_collections');
+        Schema::dropIfExists('categories');
     }
 }

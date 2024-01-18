@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQuestionAnswersTable extends Migration
+class CreateAnswersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateQuestionAnswersTable extends Migration
      */
     public function up()
     {
-        Schema::create('question_answers', function (Blueprint $table) {
-            $table->unsignedBigInteger('question_answer_id');
+        Schema::create('answers', function (Blueprint $table) {
+            $table->increments('answer_id')->primary();
+            $table->string('answer_texts');
+            $table->boolean('answer_booleans');
             $table->foreignId('question_id')->constrained('questions'); // 外部キー
-            $table->string('question_answer_texts');
-            $table->boolean('question_booleans');
-            $table->primary(['question_answer_id', 'question_id']);     // 複合主キー
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateQuestionAnswersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question_answers');
+        Schema::dropIfExists('answers');
     }
 }
