@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('test.testIchiran');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -33,3 +33,6 @@ Route::get('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'inde
 Route::post('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'store'])->name('test.store');
 
 Route::get('/test2' , [App\Http\Controllers\Test\testIchiranController::class, 'index'])->name('test2.index');
+
+Route::get('/password/change', [App\Http\Controllers\Auth\ChangePasswordController::class,'showChangePasswordForm'])->name('password.form');
+Route::post('/password/change', [App\Http\Controllers\Auth\ChangePasswordController::class,'ChangePassword'])->name('password.change');
