@@ -14,7 +14,7 @@
 
     @foreach($questionCollections as $collection)
     <div class="test">
-        <div class = "card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+        <div class = "card-header p-0 position-relative mt-n4 mx-3 z-index-2" id="card">
         <div class= "box2"><h2><p>{{ $collection->question_collection_name}}</p></h2></div>
         </div>
         <ul class="test2">
@@ -27,6 +27,8 @@
         </ul>
     </div>
     @endforeach
+
+
 
     <script src="{{ asset('js/test.js') }}"></script>
 </body>

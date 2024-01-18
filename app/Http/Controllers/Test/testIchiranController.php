@@ -16,4 +16,12 @@ class testIchiranController extends Controller
 
         return view('test.testIchiran' , compact('questionGroups', 'questionCollections'));
     }
+
+    public function index2()
+    {
+        $questionCollections = testIchiranModel::all();
+        $questionGroups = testQuestionGroups::all();
+
+        return view('test.testAcodion' , compact('questionGroups', 'questionCollections'));
+    }
 }

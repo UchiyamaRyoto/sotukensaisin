@@ -33,3 +33,4 @@ Route::get('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'inde
 Route::post('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'store'])->name('test.store');
 
 Route::get('/test2' , [App\Http\Controllers\Test\testIchiranController::class, 'index'])->name('test2.index');
+Route::get('/test3' , [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('test2.index2');
