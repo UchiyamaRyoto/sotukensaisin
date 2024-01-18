@@ -88,6 +88,30 @@
   .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_inner  .accordion_header {
     background-color: #85c9ff;
   }
+  .s_07 .accordion_one:nth-of-type(4) .accordion_inner .accordion_header {
+    background-color: #f52d4c;
+  }
+  .s_07 .accordion_one:nth-of-type(4) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #ff667e;
+  }
+  .s_07 .accordion_one:nth-of-type(5) .accordion_header {
+    background-color: #ff9a05;
+  }
+  .s_07 .accordion_one:nth-of-type(5) .accordion_inner .accordion_header {
+    background-color: #ffb64a;
+  }
+  .s_07 .accordion_one:nth-of-type(5) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #ffce85;
+  }
+  .s_07 .accordion_one:nth-of-type(6) .accordion_header {
+    background-color: #1c85d8;
+  }
+  .s_07 .accordion_one:nth-of-type(6) .accordion_inner .accordion_header {
+    background-color: #4cacf9;
+  }
+  .s_07 .accordion_one:nth-of-type(6) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #85c9ff;
+  }
   .s_07 .accordion_one .accordion_header:hover {
     opacity: .8;
   }
@@ -221,3 +245,16 @@
     transform: rotate(45deg);
     margin-right: 10px;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
