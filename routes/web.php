@@ -34,5 +34,16 @@ Route::post('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'sto
 
 Route::get('/test2' , [App\Http\Controllers\Test\testIchiranController::class, 'index'])->name('test2.index');
 
-Route::get('/password/change', [App\Http\Controllers\Auth\ChangePasswordController::class,'showChangePasswordForm'])->name('password.form');
-Route::post('/password/change', [App\Http\Controllers\Auth\ChangePasswordController::class,'ChangePassword'])->name('password.change');
+Route::get('/setting/password', [App\Http\Controllers\Auth\ChangePasswordController::class,'showChangePasswordForm'])->name('password.form');
+Route::post('/setting/password', [App\Http\Controllers\Auth\ChangePasswordController::class,'changePassword'])->name('password.change');
+
+Route::get('/setting/deactive', [App\Http\Controllers\Auth\DeactiveController::class,'showDeactiveForm'])->name('deactive.form');
+Route::post('/setting/deactive', [App\Http\Controllers\Auth\DeactiveController::class,'deactive'])->name('deactive');
+
+Route::get('/setting', [App\Http\Controllers\SettingController::class,'index'])->name('setting');
+
+Route::get('/setting/name', [App\Http\Controllers\SettingController::class,'showChangeNameForm'])->name('name.form');
+Route::post('/setting/name', [App\Http\Controllers\SettingController::class,'changeName'])->name('name.change');
+
+Route::get('/setting/email', [App\Http\Controllers\SettingController::class,'showChangeEmailForm'])->name('email.form');
+Route::post('/setting/email', [App\Http\Controllers\SettingController::class,'changeEmail'])->name('email.change');

@@ -70,6 +70,7 @@
                                     <a class="dropdown-item" href="{{ route('password.form') }}">
                                        {{ __('Change Password') }}
                                    </a>
+                                   
                                 </div>
                             </li>
                         @endguest

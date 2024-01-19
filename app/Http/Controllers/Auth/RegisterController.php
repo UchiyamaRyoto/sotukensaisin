@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
@@ -51,9 +52,9 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users', 'email')->whereNull('deleted_at'),],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-             'username' => ['required', 'string', 'max:32', 'unique:users', 'regex:/^[a-zA-Z0-9-_]+$/'],
+            'username' => ['required', 'string', 'max:32', Rule::unique('users', 'username')->whereNull('deleted_at'), 'regex:/^[a-zA-Z0-9-_]+$/'],
         ]);
     }
 
