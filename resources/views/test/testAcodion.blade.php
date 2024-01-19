@@ -40,8 +40,8 @@
                 @endif
               <div class="accordion_inner">
                 <div class="accordion_one">
-                  <div class="accordion_header">A_a</div>
-                  <div class="accordion_header">A_b</div>
+                  <div class="accordion_header">宗教改革</div>
+                  <div class="accordion_header">ルネサンス</div>
                 </div>
               </div>
               @endforeach
@@ -61,8 +61,8 @@
                 @endif
               <div class="accordion_inner">
                 <div class="accordion_one">
-                  <div class="accordion_header">A_a</div>
-                  <div class="accordion_header">A_b</div>
+                  <div class="accordion_header">宗教改革</div>
+                  <div class="accordion_header">ルネサンス</div>
                 </div>
               </div>
               @endforeach

@@ -34,3 +34,4 @@ Route::post('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'sto
 
 Route::get('/test2' , [App\Http\Controllers\Test\testIchiranController::class, 'index'])->name('test2.index');
 Route::get('/test3' , [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('test2.index2');
+Route::get('/testQuiz', function () {return view('test/testQuiz');})->name('example.route');
