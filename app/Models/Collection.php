@@ -9,5 +9,7 @@ class Collection extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'collection_id';
+    // 20240119 加藤　作成
+
+    protected $primaryKey = 'collection_id';        // 主キー変更
 }

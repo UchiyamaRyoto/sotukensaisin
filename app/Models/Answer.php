@@ -9,5 +9,7 @@ class Answer extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'answer_id';
+    // 20240119 加藤　作成 *************************　
+
+    protected $primaryKey = 'answer_id';        // 主キー変更
 }

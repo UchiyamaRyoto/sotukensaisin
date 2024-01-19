@@ -13,9 +13,11 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
+        // 20240119 加藤　作成 *****************************************************
+
         Schema::create('categories', function (Blueprint $table) {
-            $table->bigIncrements('category_id')->unsigned();
-            $table->string('category_names');
+            $table->bigIncrements('category_id')->unsigned();   // カテゴリーID
+            $table->string('category_names');                   // カテゴリー名
             $table->timestamps();
         });
     }
