@@ -20,3 +20,4 @@ $(function(){
 		$(this).next().slideToggle();
 	});
 });
+

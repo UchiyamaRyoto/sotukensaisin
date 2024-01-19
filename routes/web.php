@@ -47,3 +47,5 @@ Route::post('/setting/name', [App\Http\Controllers\SettingController::class,'cha
 
 Route::get('/setting/email', [App\Http\Controllers\SettingController::class,'showChangeEmailForm'])->name('email.form');
 Route::post('/setting/email', [App\Http\Controllers\SettingController::class,'changeEmail'])->name('email.change');
+Route::get('/test3' , [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('test2.index2');
+Route::get('/testQuiz', function () {return view('test/testQuiz');})->name('example.route');
