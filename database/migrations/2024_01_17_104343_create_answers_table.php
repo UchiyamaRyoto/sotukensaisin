@@ -14,10 +14,12 @@ class CreateAnswersTable extends Migration
     public function up()
     {
         Schema::create('answers', function (Blueprint $table) {
-            $table->increments('answer_id')->primary();
+            $table->bigIncrements('answer_id');
             $table->string('answer_texts');
             $table->boolean('answer_booleans');
-            $table->foreignId('question_id')->constrained('questions'); // 外部キー
+            $table->unsignedBigInteger('question_id');
+            // 外部キー制約
+            $table->foreign('question_id')->references('question_id')->on('questions');
             $table->timestamps();
         });
     }

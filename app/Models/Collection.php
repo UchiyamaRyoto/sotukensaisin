@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class questionsModel extends Model
+class Collection extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'question_id';
-    protected $keyType = 'increments';
+    protected $primaryKey = 'collection_id';
 }

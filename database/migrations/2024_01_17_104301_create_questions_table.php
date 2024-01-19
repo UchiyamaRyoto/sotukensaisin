@@ -14,11 +14,14 @@ class CreateQuestionsTable extends Migration
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->increments('question_id')->primary();
+            $table->bigIncrements('question_id')->unsigned();
             $table->string('question_sentences');
             $table->integer('question_lengths');
             $table->boolean('question_booleans');
-            $table->foreignId('collection_id')->constrained('collections');
+            $table->unsignedBigInteger('collection_id');
+            // 外部キー制約
+            $table->foreign('collection_id')->references('collection_id')->on('collections');
+
             $table->timestamps();
         });
     }

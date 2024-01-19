@@ -14,12 +14,15 @@ class CreateCollectionsTable extends Migration
     public function up()
     {
         Schema::create('collections', function (Blueprint $table) {
-            $table->increments('collection_id')->primary();
+            $table->bigIncrements('collection_id');
             $table->string('collection_names', 30);
             $table->text('collection_sentences');
+            $table->unsignedBigInteger('id');
+            $table->unsignedBigInteger('category_id');
+            // 外部キー制約
             $table->foreign('id')->references('id')->on('users');
-            $table->unsignedInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('category_id')->on('categories');
+
             $table->timestamps();
         });
     }
