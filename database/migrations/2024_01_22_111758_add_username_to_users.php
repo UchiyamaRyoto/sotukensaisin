@@ -14,7 +14,8 @@ class AddUsernameToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+             //文字長32、ユニーク制約、idカラムの直後に追加、コメント「ユーザー名」でusernameカラム追加
+              //$table->string('username', 32)->unique('users_username_unique')->after('id')->comment('ユーザー名');
         });
     }
 
@@ -26,9 +27,7 @@ class AddUsernameToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-             //文字長32、ユニーク制約、idカラムの直後に追加、コメント「ユーザー名」でusernameカラム追加
-+             $table->string('username', 32)->unique('users_username_unique')->after('id')->comment('ユーザー名');
-          
+            $table->dropColumn('username');
         });
     }
 }
