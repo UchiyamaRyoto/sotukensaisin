@@ -1,0 +1,331 @@
+.box2 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.box2 p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 矢印回転 */
+.box2 {
+	font-weight: bold;
+	line-height: 42px;
+	margin: 0;
+	padding: 0 0 0 10px;
+	position: relative;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.box2:hover {
+	color: #fd7e00;
+}
+.box2:after {
+	content: "";
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background:url(btn_arrow.png) no-repeat right top;
+	position:absolute;
+	top: 50%;
+	right: 7px;
+	transform: translateY(-50%);
+	transition: 0.2s;
+}
+.box2.selected:after {
+	transform: translateY(-50%) rotate(180deg);
+	transition: 0.2s;
+}
+
+
+/* アコーディオン */
+/*====================================================================
+.s_07 .accordion_one
+====================================================================*/
+.s_07 {
+    background-color: #e7fbe0;
+}
+.s_07 .accordion_one {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .s_07 .accordion_one .accordion_header {
+    background-color: #db0f2f;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 20px 11%;
+    text-align: center;
+    position: relative;
+    z-index: +1;
+    cursor: pointer;
+    transition-duration: 0.2s;
+  }
+  .s_07 .accordion_one:nth-of-type(1) .accordion_header {
+    background-color: #ff9a05;
+  }
+  .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
+    background-color: #ffb64a;
+  }
+  .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #ffce85;
+  }
+  .s_07 .accordion_one:nth-of-type(2) .accordion_header {
+    background-color: #ff9a05;
+  }
+  .s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
+    background-color: #ffb64a;
+  }
+  .s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #ffce85;
+  }
+  .s_07 .accordion_one:nth-of-type(3) .accordion_header {
+    background-color: #ff9a05;
+  }
+  .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
+    background-color: #ffb64a;
+  }
+  .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #ffce85;
+  }
+  .s_07 .accordion_one:nth-of-type(4) .accordion_header {
+    background-color: #1c85d8;
+  }
+  .s_07 .accordion_one:nth-of-type(4) .accordion_inner .accordion_header {
+    background-color: #4cacf9;
+  }
+  .s_07 .accordion_one:nth-of-type(4) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #85c9ff;
+  }
+  .s_07 .accordion_one:nth-of-type(5) .accordion_header {
+    background-color: #1c85d8;
+  }
+  .s_07 .accordion_one:nth-of-type(5) .accordion_inner .accordion_header {
+    background-color: #4cacf9;
+  }
+  .s_07 .accordion_one:nth-of-type(5) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #85c9ff;
+  }
+  .s_07 .accordion_one:nth-of-type(6) .accordion_header {
+    background-color: #1c85d8;
+  }
+  .s_07 .accordion_one:nth-of-type(6) .accordion_inner .accordion_header {
+    background-color: #4cacf9;
+  }
+  .s_07 .accordion_one:nth-of-type(6) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #85c9ff;
+  }
+  .s_07 .accordion_one .accordion_header:hover {
+    opacity: .8;
+  }
+  .s_07 .accordion_one .accordion_header .i_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    margin-top: -20px;
+    box-sizing: border-box;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+  }
+  .s_07 .accordion_one .accordion_header .i_box .one_i {
+    display: block;
+    width: 18px;
+    height: 18px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+    position: relative;
+  }
+  .s_07 .accordion_one .accordion_header.open .i_box {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+  .s_07 .accordion_one .accordion_header .i_box .one_i:before, .s_07 .accordion_one .accordion_header .i_box .one_i:after {
+    display: flex;
+    content: '';
+    background-color: #ffff;
+    border-radius: 10px;
+    width: 18px;
+    height: 4px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transform-origin: center center;
+  }
+  .s_07 .accordion_one .accordion_header .i_box .one_i:before {
+    width: 4px;
+    height: 18px;
+    top: 0;
+    left: 7px;
+  }
+  .s_07 .accordion_one .accordion_header.open .i_box .one_i:before {
+    content: none;
+  }
+  .s_07 .accordion_one .accordion_header.open .i_box .one_i:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .s_07 .accordion_one .accordion_inner {
+    display: none;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .s_07 .accordion_one .accordion_inner .box_one {
+    height: 300px;
+  }
+  .s_07 .accordion_one .accordion_inner p.txt_a_ac {
+    margin: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    .s_07 .accordion_one .accordion_header {
+      font-size: 18px;
+    }
+    .s_07 .accordion_one .accordion_header .i_box {
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .s_07 .accordion_one .accordion_header {
+      font-size: 16px;
+      text-align: left;
+      padding: 15px 60px 15px 15px;
+    }
+  }
+
+  /*====================================================================
+  以下は不要です。
+  ====================================================================*/
+
+  body {
+    font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 16px;
+    letter-spacing: .025em;
+    line-height: 1.8;
+    margin: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  .section {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px 20px 500px;
+  }
+  .section p._a {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 30px 0 0;
+  }
+  .section p._a .link {
+    display: inline-block;
+    color: #607D8B;
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+  }
+  .section p._a .link:before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #607D8B;
+    border-right: 2px solid #607D8B;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-right: 10px;
+  }
+
+/* 見出し */
+h1 {
+    position: relative;/*相対位置*/
+    padding: 0.5em 0.5em 0.5em 1.5em;/*アイコン分のスペース*/
+    line-height: 1.4;/*行高*/
+    color: #ff6a6a;/*文字色*/
+    border-top: dotted 1px gray;
+    border-bottom: dotted 1px gray;
+    background: #fffff4;
+  }
+
+  h1:before {
+    font-family: "Font Awesome 5 Free";/*忘れずに*/
+    content: "\f138";/*アイコンのユニコード*/
+    font-weight: 900;
+    position: absolute;/*絶対位置*/
+    font-size: 1em;/*サイズ*/
+    left: 0.25em;/*アイコンの位置*/
+    top: 0.5em;/*アイコンの位置*/
+    color: #ff6a6a; /*アイコン色*/
+  }
+
+
+/* 見出し */
+  .section_midasi {
+    position: relative;
+    padding: 0;
+    text-align: center;
+  }
+
+  .section_midasi:before {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #ffb64a;
+  }
+
+  .section_midasi span {
+    position: relative;
+    padding: 0 1em;
+    background: #e7fbe0;
+    color:#ff9a05;
+  }
+  .section_midasi2 {
+    position: relative;
+    padding: 0;
+    text-align: center;
+  }
+
+  .section_midasi2:before {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #4cacf9;
+  }
+
+  .section_midasi2 span {
+    position: relative;
+    padding: 0;
+    background: #e7fbe0;
+    color:#1c85d8;
+  }
+
+
+
+
+
+

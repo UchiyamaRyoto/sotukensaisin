@@ -15,7 +15,7 @@ class CreateQuestionCollectionsTable extends Migration
     {
         Schema::create('question_collections', function (Blueprint $table) {
             $table->id();
-            $table->string('question_collection_name');
+            $table->string('question_collection_names');
             $table->timestamps();
         });
     }

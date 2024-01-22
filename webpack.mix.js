@@ -12,5 +12,13 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+   .js( 'resources/js/test.js', 'public/js' )
+   .js('resources/js/test2.js', 'public/js')
+   .js('resources/js/testQuizData.js', 'public/js')
+   .js('resources/js/testQuizCommon', 'public/js')
+.autoload( {
+    "jquery": [ '$', 'window.jQuery' ],
+} )
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/test2.scss', 'public/css')
     .sourceMaps();
