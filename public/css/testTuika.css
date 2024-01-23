@@ -1,0 +1,16 @@
+a.btn--green.btn--emboss {
+    color: #00662d;
+    text-shadow: -1px -1px 1px #00ff71;
+    border-bottom: 5px solid #00662d;
+  }
+
+  a.btn--green.btn--cubic:hover {
+    margin-top: 3px;
+    border-bottom: 2px solid #00662d;
+  }
+
+  .fa-position-right {
+      position: absolute;
+      top: calc(50% - .5em);
+      right: 1rem;
+  }
