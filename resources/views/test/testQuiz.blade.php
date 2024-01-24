@@ -24,6 +24,10 @@
                     <span class = "full">/100点</span>
                 </div>
                 <span class = "evaluation"></span>
+                <br>
+                <div class="button-container">
+                    <a href="{{ route('testKekka') }}"><button>解答へ</button></a>
+                </div>
             </div>
             <div class = "quiz-question-number"></div>
             <h2 class = "quiz-question"></h2>
