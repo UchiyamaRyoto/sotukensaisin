@@ -53,3 +53,7 @@ Route::get('/testQuiz', function () {return view('test/testQuiz');})->name('exam
 
 //テストで追加。消していい
 Route::get('/testTuika' , function () {return view('test/testTuika');})->name('testTuika');
+
+//内山　問題から結果への遷移
+Route::get('/testKekka' , function () {return view('test/testKekka');})->name('testKekka');
+Route::get('/test3' , [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('test3');

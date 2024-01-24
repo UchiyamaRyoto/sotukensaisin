@@ -1,5 +1,4 @@
 <!-- resources/views/test/testIchiran.blade.php -->
-@extends('layouts.app')
 
 @section('content')
 <!DOCTYPE html>
@@ -13,10 +12,22 @@
 </head>
 <body>
 <main>
-    <div>
-        <a href="" class="btn btn--green btn--emboss btn--cubic">文字から<i class="fas fa-angle-right fa-position-right"></i></a>
-        <a href="" class="btn btn--green btn--emboss btn--cubic">画像から<i class="fas fa-angle-right fa-position-right"></i></a>
+    <div class="button-container">
+        <button>ボタン</button>
+        <button>ボタン</button>
     </div>
 </main>
 </body>
+<style>
+    .button-container {
+        display: flex;
+        flex-direction: column; /* Set the direction to column to align buttons vertically */
+        align-items: center; /* Center items horizontally */
+        margin-top: 400px;
+    }
 
+    button {
+        margin-bottom: 10px; /* Add some margin between buttons for better spacing */
+    }
+</style>
+</html>
