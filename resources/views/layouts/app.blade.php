@@ -9,7 +9,7 @@
         <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
         <ul class="menu">
             <li class="top"><a href="#home">home</a></li>
-            <li><a href="#skills">skills</a></li>
+            <li><a href="#skills">問題選択</a></li>
             <li><a href="#projects">projects</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
@@ -66,6 +66,11 @@
                                 </form>
                                 <a class="dropdown-item" href="{{ route('setting') }}">
                                     {{ __('setting') }}
+                                </a>
+
+                                <!-- 点数確認 -->
+                                <a class="dropdown-item" href="{{ route('setting') }}">
+                                    {{ __('結果確認') }}
                                 </a>
 
                             </div>

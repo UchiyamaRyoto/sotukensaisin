@@ -30,7 +30,7 @@
 
 <body>
   <header>
-  @extends('layouts.header')
+  @extends('layouts.app')
   </header>
     <div class="section s_01">
         <div class="containerLabel">

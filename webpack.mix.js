@@ -15,6 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
    .js( 'resources/js/test.js', 'public/js' )
    .js('resources/js/test2.js', 'public/js')
    .js('resources/js/testQuizCommon', 'public/js')
+   .js('resources/js/checkScore', 'public/js')
 .autoload( {
     "jquery": [ '$', 'window.jQuery' ],
 } )
