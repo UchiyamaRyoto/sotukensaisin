@@ -1,5 +1,5 @@
 <!-- resources/views/test/testIchiran.blade.php -->
-@extends('layouts.app')
+@extends('layouts.header')
 
 @section('content')
 <!DOCTYPE html>

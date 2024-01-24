@@ -1,5 +1,5 @@
 <!-- resources/views/test/testIchiran.blade.php -->
-@extends('layouts.app')
+
 
 @section('content')
 <!DOCTYPE html>
@@ -7,11 +7,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <!-- CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/test.css') }}">
-    <title>Question List</title>
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet"> 
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    
+  
+    
 </head>
+
 <body>
+  <header>
+  @extends('layouts.header')
+  </header>
     <div class="section s_01">
         <div class="containerLabel">
             <div class="row">
@@ -79,13 +99,6 @@
         </div>
         @endforeach
     </div>
-
-
-
-
-
-
-
 
     <script src="{{ asset('js/test2.js') }}"></script>
     <script src="{{ asset('js/test.js') }}"></script>

@@ -53,3 +53,4 @@ Route::get('/testQuiz', function () {return view('test/testQuiz');})->name('exam
 
 //テストで追加。消していい
 Route::get('/testTuika' , function () {return view('test/testTuika');})->name('testTuika');
+Route::get('/test4' , function () {return view('layouts/appcopy');});
