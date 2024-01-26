@@ -41,6 +41,8 @@ Route::get('/setting/deactive', [App\Http\Controllers\Auth\DeactiveController::c
 Route::post('/setting/deactive', [App\Http\Controllers\Auth\DeactiveController::class,'deactive'])->name('deactive');
 
 Route::get('/setting', [App\Http\Controllers\SettingController::class,'index'])->name('setting');
+Route::post('/setting', [App\Http\Controllers\SettingController::class,'logout'])->name('setting');
+
 
 Route::get('/setting/name', [App\Http\Controllers\SettingController::class,'showChangeNameForm'])->name('name.form');
 Route::post('/setting/name', [App\Http\Controllers\SettingController::class,'changeName'])->name('name.change');

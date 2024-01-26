@@ -53,4 +53,9 @@ class SettingController extends Controller
                      //homeにリダイレクト
                      return redirect()->route('setting')->with('status', __('Your email address has been changed.'));
                    }
+                public function logout()
+                {
+                    $auth =Auth::logout();
+                    return view('welcome');
+                }
 }
