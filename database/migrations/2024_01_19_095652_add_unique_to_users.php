@@ -14,8 +14,8 @@ class AddUniqueToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unique(['email', 'deleted_at'], 'users_email_deleted_at_unique');
-            $table->unique(['username', 'deleted_at'], 'users_username_deleted_at_unique');
+            //$table->unique(['email', 'deleted_at'], 'users_email_deleted_at_unique');
+            //$table->unique(['username', 'deleted_at'], 'users_username_deleted_at_unique');
             //みんなの方でuniqueになってなかったら上のコードを適応
         });
     }

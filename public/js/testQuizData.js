@@ -21,12 +21,8 @@ eval("var prefectural = [{\n  id: \"01\",\n  question: \"一定の対象を積�
 
 /******/ 	});
 /************************************************************************/
+/******/ 	"use strict";
 /******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./resources/js/testQuizData.js"]();
 /******/ 	
 /******/ })()
 ;

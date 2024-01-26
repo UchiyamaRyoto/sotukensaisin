@@ -14,8 +14,8 @@ class DropUniqueToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-           $table->dropUnique('users_email_unique');
-            $table->dropUnique('users_username_unique');
+           //$table->dropUnique('users_email_unique');
+            //$table->dropUnique('users_username_unique');
             //ここも一緒反映が必須だった場合上のコードを適用
         });
     }
