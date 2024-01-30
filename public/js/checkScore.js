@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./resources/js/welcome.js":
-/*!*********************************!*\
-  !*** ./resources/js/welcome.js ***!
-  \*********************************/
+/***/ "./resources/js/checkScore.js":
+/*!************************************!*\
+  !*** ./resources/js/checkScore.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n$(function () {\n  // ページがロードされたときに実行されるコード\n  $('body').addClass('no_scroll');\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvd2VsY29tZS5qcyIsIm1hcHBpbmdzIjoiO0FBQUFBLENBQUMsQ0FBQyxZQUFXO0VBQ1Q7RUFDQUEsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDQyxRQUFRLENBQUMsV0FBVyxDQUFDO0FBQ25DLENBQUMsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9qcy93ZWxjb21lLmpzPzI2ZDIiXSwic291cmNlc0NvbnRlbnQiOlsiJChmdW5jdGlvbigpIHtcbiAgICAvLyDjg5rjg7zjgrjjgYzjg63jg7zjg4njgZXjgozjgZ/jgajjgY3jgavlrp/ooYzjgZXjgozjgovjgrPjg7zjg4lcbiAgICAkKCdib2R5JykuYWRkQ2xhc3MoJ25vX3Njcm9sbCcpO1xufSk7Il0sIm5hbWVzIjpbIiQiLCJhZGRDbGFzcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/welcome.js\n");
+eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n$(function updateScore() {\n  // ここに得点を更新するロジックを追加\n  // 選択された問題集に基づいて適切な得点を設定してください\n  var selectedQuiz = document.getElementById(\"quizSelect\").value;\n  var score = 0; // 仮の得点、実際のロジックに置き換えてください\n\n  // 仮のロジック\n  if (selectedQuiz === \"中世\") {\n    score = 80;\n  } else if (selectedQuiz === \"近世\") {\n    score = 90;\n  } else if (selectedQuiz === \"近代\") {\n    score = 75;\n  } else if (selectedQuiz === \"現代\") {\n    score = 75;\n  }\n\n  // 得点を表示する要素に得点をセット\n  document.getElementById(\"scoreDisplay\").innerText = score;\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvY2hlY2tTY29yZS5qcyIsIm1hcHBpbmdzIjoiO0FBQ0FBLENBQUMsQ0FBQyxTQUFTQyxXQUFXQSxDQUFBLEVBQUc7RUFDekI7RUFDQTtFQUNBLElBQUlDLFlBQVksR0FBR0MsUUFBUSxDQUFDQyxjQUFjLENBQUMsWUFBWSxDQUFDLENBQUNDLEtBQUs7RUFDOUQsSUFBSUMsS0FBSyxHQUFHLENBQUMsQ0FBQyxDQUFDOztFQUVmO0VBQ0EsSUFBSUosWUFBWSxLQUFLLElBQUksRUFBRTtJQUN2QkksS0FBSyxHQUFHLEVBQUU7RUFDZCxDQUFDLE1BQU0sSUFBSUosWUFBWSxLQUFLLElBQUksRUFBRTtJQUM5QkksS0FBSyxHQUFHLEVBQUU7RUFDZCxDQUFDLE1BQU0sSUFBSUosWUFBWSxLQUFLLElBQUksRUFBRTtJQUM5QkksS0FBSyxHQUFHLEVBQUU7RUFDZCxDQUFDLE1BQU0sSUFBSUosWUFBWSxLQUFLLElBQUksRUFBRTtJQUM5QkksS0FBSyxHQUFHLEVBQUU7RUFDZDs7RUFFQTtFQUNBSCxRQUFRLENBQUNDLGNBQWMsQ0FBQyxjQUFjLENBQUMsQ0FBQ0csU0FBUyxHQUFHRCxLQUFLO0FBQ3pELENBQ0EsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9qcy9jaGVja1Njb3JlLmpzPzZjNTgiXSwic291cmNlc0NvbnRlbnQiOlsiXG4kKGZ1bmN0aW9uIHVwZGF0ZVNjb3JlKCkge1xuLy8g44GT44GT44Gr5b6X54K544KS5pu05paw44GZ44KL44Ot44K444OD44Kv44KS6L+95YqgXG4vLyDpgbjmip7jgZXjgozjgZ/llY/poYzpm4bjgavln7rjgaXjgYTjgabpganliIfjgarlvpfngrnjgpLoqK3lrprjgZfjgabjgY/jgaDjgZXjgYRcbnZhciBzZWxlY3RlZFF1aXogPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcInF1aXpTZWxlY3RcIikudmFsdWU7XG52YXIgc2NvcmUgPSAwOyAvLyDku67jga7lvpfngrnjgIHlrp/pmpvjga7jg63jgrjjg4Pjgq/jgavnva7jgY3mj5vjgYjjgabjgY/jgaDjgZXjgYRcblxuLy8g5Luu44Gu44Ot44K444OD44KvXG5pZiAoc2VsZWN0ZWRRdWl6ID09PSBcIuS4reS4llwiKSB7XG4gICAgc2NvcmUgPSA4MDtcbn0gZWxzZSBpZiAoc2VsZWN0ZWRRdWl6ID09PSBcIui/keS4llwiKSB7XG4gICAgc2NvcmUgPSA5MDtcbn0gZWxzZSBpZiAoc2VsZWN0ZWRRdWl6ID09PSBcIui/keS7o1wiKSB7XG4gICAgc2NvcmUgPSA3NTtcbn0gZWxzZSBpZiAoc2VsZWN0ZWRRdWl6ID09PSBcIuePvuS7o1wiKSB7XG4gICAgc2NvcmUgPSA3NTtcbn1cblxuLy8g5b6X54K544KS6KGo56S644GZ44KL6KaB57Sg44Gr5b6X54K544KS44K744OD44OIXG5kb2N1bWVudC5nZXRFbGVtZW50QnlJZChcInNjb3JlRGlzcGxheVwiKS5pbm5lclRleHQgPSBzY29yZTtcbn1cbikiXSwibmFtZXMiOlsiJCIsInVwZGF0ZVNjb3JlIiwic2VsZWN0ZWRRdWl6IiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCIsInZhbHVlIiwic2NvcmUiLCJpbm5lclRleHQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/checkScore.js\n");
 
 /***/ }),
 
@@ -60,7 +60,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./resources/js/welcome.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./resources/js/checkScore.js");
 /******/ 	
 /******/ })()
 ;

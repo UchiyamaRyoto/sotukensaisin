@@ -1,3 +1,7 @@
+body {
+    background-color: #e7fbe0;
+}
+
 .box2 {
     padding: 0.5em 1em;
     margin: 2em 0;
@@ -45,16 +49,16 @@
 
 /* アコーディオン */
 /*====================================================================
-.s_07 .accordion_one
+.s_01 .accordion_one
 ====================================================================*/
-.s_07 {
+.s_01 {
     background-color: #e7fbe0;
 }
-.s_07 .accordion_one {
+.s_01 .accordion_one {
     max-width: 1024px;
     margin: 0 auto;
   }
-  .s_07 .accordion_one .accordion_header {
+  .s_01 .accordion_one .accordion_header {
     background-color: #db0f2f;
     border-bottom: 1px solid #fff;
     color: #fff;
@@ -67,64 +71,82 @@
     cursor: pointer;
     transition-duration: 0.2s;
   }
-  .s_07 .accordion_one:nth-of-type(1) .accordion_header {
+  .s_01 .accordion_one:nth-of-type(1) .accordion_header {
     background-color: #ff9a05;
   }
-  .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
+  .s_01 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
     background-color: #ffb64a;
   }
-  .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_inner  .accordion_header {
+  .s_01 .accordion_one:nth-of-type(1) .accordion_inner .accordion_inner  .accordion_header {
     background-color: #ffce85;
   }
-  .s_07 .accordion_one:nth-of-type(2) .accordion_header {
+  .s_01 .accordion_one:nth-of-type(2) .accordion_header {
     background-color: #ff9a05;
   }
-  .s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
+  .s_01 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
     background-color: #ffb64a;
   }
-  .s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_inner  .accordion_header {
+  .s_01 .accordion_one:nth-of-type(2) .accordion_inner .accordion_inner  .accordion_header {
     background-color: #ffce85;
   }
-  .s_07 .accordion_one:nth-of-type(3) .accordion_header {
+  .s_01 .accordion_one:nth-of-type(3) .accordion_header {
     background-color: #ff9a05;
   }
-  .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
+  .s_01 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
     background-color: #ffb64a;
   }
-  .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_inner  .accordion_header {
+  .s_01 .accordion_one:nth-of-type(3) .accordion_inner .accordion_inner  .accordion_header {
     background-color: #ffce85;
   }
-  .s_07 .accordion_one:nth-of-type(4) .accordion_header {
+  .s_01 .accordion_one:nth-of-type(4) .accordion_header {
+    background-color: #ff9a05;
+  }
+  .s_01 .accordion_one:nth-of-type(4) .accordion_inner .accordion_header {
+    background-color: #ffb64a;
+  }
+  .s_01 .accordion_one:nth-of-type(4) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #ffce85;
+  }
+  .s_01 .accordion_one:nth-of-type(5) .accordion_header {
     background-color: #1c85d8;
   }
-  .s_07 .accordion_one:nth-of-type(4) .accordion_inner .accordion_header {
+  .s_01 .accordion_one:nth-of-type(5) .accordion_inner .accordion_header {
     background-color: #4cacf9;
   }
-  .s_07 .accordion_one:nth-of-type(4) .accordion_inner .accordion_inner  .accordion_header {
+  .s_01 .accordion_one:nth-of-type(5) .accordion_inner .accordion_inner  .accordion_header {
     background-color: #85c9ff;
   }
-  .s_07 .accordion_one:nth-of-type(5) .accordion_header {
+  .s_01 .accordion_one:nth-of-type(6) .accordion_header {
     background-color: #1c85d8;
   }
-  .s_07 .accordion_one:nth-of-type(5) .accordion_inner .accordion_header {
+  .s_01 .accordion_one:nth-of-type(6) .accordion_inner .accordion_header {
     background-color: #4cacf9;
   }
-  .s_07 .accordion_one:nth-of-type(5) .accordion_inner .accordion_inner  .accordion_header {
+  .s_01 .accordion_one:nth-of-type(6) .accordion_inner .accordion_inner  .accordion_header {
     background-color: #85c9ff;
   }
-  .s_07 .accordion_one:nth-of-type(6) .accordion_header {
+  .s_01 .accordion_one:nth-of-type(7) .accordion_header {
     background-color: #1c85d8;
   }
-  .s_07 .accordion_one:nth-of-type(6) .accordion_inner .accordion_header {
+  .s_01 .accordion_one:nth-of-type(7) .accordion_inner .accordion_header {
     background-color: #4cacf9;
   }
-  .s_07 .accordion_one:nth-of-type(6) .accordion_inner .accordion_inner  .accordion_header {
+  .s_01 .accordion_one:nth-of-type(7) .accordion_inner .accordion_inner  .accordion_header {
     background-color: #85c9ff;
   }
-  .s_07 .accordion_one .accordion_header:hover {
+  .s_01 .accordion_one:nth-of-type(8) .accordion_header {
+    background-color: #1c85d8;
+  }
+  .s_01 .accordion_one:nth-of-type(8) .accordion_inner .accordion_header {
+    background-color: #4cacf9;
+  }
+  .s_01 .accordion_one:nth-of-type(8) .accordion_inner .accordion_inner  .accordion_header {
+    background-color: #85c9ff;
+  }
+  .s_01 .accordion_one .accordion_header:hover {
     opacity: .8;
   }
-  .s_07 .accordion_one .accordion_header .i_box {
+  .s_01 .accordion_one .accordion_header .i_box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,7 +163,7 @@
     transform-origin: center center;
     transition-duration: 0.2s;
   }
-  .s_07 .accordion_one .accordion_header .i_box .one_i {
+  .s_01 .accordion_one .accordion_header .i_box .one_i {
     display: block;
     width: 18px;
     height: 18px;
@@ -151,11 +173,11 @@
     transition-duration: 0.2s;
     position: relative;
   }
-  .s_07 .accordion_one .accordion_header.open .i_box {
+  .s_01 .accordion_one .accordion_header.open .i_box {
     -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
-  .s_07 .accordion_one .accordion_header .i_box .one_i:before, .s_07 .accordion_one .accordion_header .i_box .one_i:after {
+  .s_01 .accordion_one .accordion_header .i_box .one_i:before, .s_01 .accordion_one .accordion_header .i_box .one_i:after {
     display: flex;
     content: '';
     background-color: #ffff;
@@ -169,42 +191,42 @@
     transform: rotate(0deg);
     transform-origin: center center;
   }
-  .s_07 .accordion_one .accordion_header .i_box .one_i:before {
+  .s_01 .accordion_one .accordion_header .i_box .one_i:before {
     width: 4px;
     height: 18px;
     top: 0;
     left: 7px;
   }
-  .s_07 .accordion_one .accordion_header.open .i_box .one_i:before {
+  .s_01 .accordion_one .accordion_header.open .i_box .one_i:before {
     content: none;
   }
-  .s_07 .accordion_one .accordion_header.open .i_box .one_i:after {
+  .s_01 .accordion_one .accordion_header.open .i_box .one_i:after {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  .s_07 .accordion_one .accordion_inner {
+  .s_01 .accordion_one .accordion_inner {
     display: none;
     padding: 0;
     box-sizing: border-box;
   }
-  .s_07 .accordion_one .accordion_inner .box_one {
+  .s_01 .accordion_one .accordion_inner .box_one {
     height: 300px;
   }
-  .s_07 .accordion_one .accordion_inner p.txt_a_ac {
+  .s_01 .accordion_one .accordion_inner p.txt_a_ac {
     margin: 0;
   }
   @media screen and (max-width: 1024px) {
-    .s_07 .accordion_one .accordion_header {
+    .s_01 .accordion_one .accordion_header {
       font-size: 18px;
     }
-    .s_07 .accordion_one .accordion_header .i_box {
+    .s_01 .accordion_one .accordion_header .i_box {
       width: 30px;
       height: 30px;
       margin-top: -15px;
     }
   }
   @media screen and (max-width: 767px) {
-    .s_07 .accordion_one .accordion_header {
+    .s_01 .accordion_one .accordion_header {
       font-size: 16px;
       text-align: left;
       padding: 15px 60px 15px 15px;
@@ -258,12 +280,9 @@
 /* 見出し */
 h1 {
     position: relative;/*相対位置*/
-    padding: 0.5em 0.5em 0.5em 1.5em;/*アイコン分のスペース*/
+    padding: 0em 0.5em 0em 1.5em;/*アイコン分のスペース*/
     line-height: 1.4;/*行高*/
     color: #ff6a6a;/*文字色*/
-    border-top: dotted 1px gray;
-    border-bottom: dotted 1px gray;
-    background: #fffff4;
   }
 
   h1:before {
@@ -273,7 +292,6 @@ h1 {
     position: absolute;/*絶対位置*/
     font-size: 1em;/*サイズ*/
     left: 0.25em;/*アイコンの位置*/
-    top: 0.5em;/*アイコンの位置*/
     color: #ff6a6a; /*アイコン色*/
   }
 
@@ -324,8 +342,74 @@ h1 {
     color:#1c85d8;
   }
 
+/* ボタン */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
 
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
+/* 背景用*/
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  margin-bottom: 10px;
+}
 
+a.btn-border-shadow {
+  padding: calc(1.5rem - 12px) 3rem 1.5rem;
 
+  background: #fff;
+}
+
+a.btn-border-shadow:before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  border: 3px solid #000;
+  border-radius: 0.5rem;
+}
+
+a.btn-border-shadow:hover {
+  padding: calc(1.5rem - 6px) 3rem;
+}
+
+a.btn-border-shadow:hover:before {
+  top: 0;
+  left: 0;
+}
 
