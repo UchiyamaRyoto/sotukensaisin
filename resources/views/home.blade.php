@@ -23,6 +23,7 @@
 <title>挑戦状</title>
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
 </head>
 <body>
 <main class = "quiz outer-block">
