@@ -20,7 +20,7 @@
 </body>
 <style>
     .button-container {
-        display: flex;
+        display:inline-block;
         flex-direction: column; /* Set the direction to column to align buttons vertically */
         align-items: center; /* Center items horizontally */
         margin-top: 400px;

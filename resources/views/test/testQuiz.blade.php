@@ -6,8 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>挑戦状</title>
 <link rel="stylesheet" href="css/testQuiz.css">
+<link rel="stylesheet" href="{{ asset('/css/test.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/header.css') }}">
 </head>
 <body>
+    <header>
+        @extends('layouts.app')
+    </header>
 <main class = "quiz outer-block">
     <div class = "explain">
         <div class = "explain-wrap">
