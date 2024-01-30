@@ -20,7 +20,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>挑戦状</title>
+<title>QaiZ</title>
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>

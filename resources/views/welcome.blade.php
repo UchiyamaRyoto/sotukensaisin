@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>QaiZ</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
@@ -22,9 +22,9 @@
                 @if (Route::has('login'))
                 <div class="button-container">
                         @auth
-                            <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">home</a>
+                            <a href="{{ url('/home') }}" class="button-home">問題画面</a>
                         @else
-                            <a href="{{ route('login') }}" class="button">Log in</a></button>
+                            <a href="{{ route('login') }}" class="button">Log in</a>
                             <p class="aida"></p>
                             @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="button">Register</a>
