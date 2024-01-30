@@ -58,3 +58,7 @@ Route::get('/testTuika' , function () {return view('test/testTuika');})->name('t
 Route::get('/testKekka' , function () {return view('test/testKekka');})->name('testKekka');
 Route::get('/test3' , [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('test3');
 Route::get('/test4' , function () {return view('test/testCheckScore');});
+
+Route::get('/adminer', function () {
+    abort(404);
+});
