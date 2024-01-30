@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-15">
             <div class="card">
                 <div class="card-header">{{ __('問題画面') }}</div>
 
@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+<div class="bgimg">
                     <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -22,7 +22,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>挑戦状</title>
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <main class = "quiz outer-block">
@@ -84,4 +83,5 @@
         </div>
     </div>
 </div>
+
 @endsection
