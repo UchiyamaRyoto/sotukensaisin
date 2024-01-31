@@ -34,7 +34,7 @@
       <!-- 他の問題集も追加できます -->
     </select>
   </div>
-
+  <!-- 2024/01/30 結果確認（仮）小島 -->
   <!-- 問題と得点のテーブル表示 -->
   <table class="table">
     <thead>
@@ -53,47 +53,58 @@
 <script>
   function updateScore() {
     var selectedQuiz = document.getElementById("quizSelect").value;
-    var score = 0;
-    var quiz = '';
-
-    // ロジックを追加
-    if (selectedQuiz === "中世") {
-      score = '80点';
-      quiz = 'ルネサンス革命：';
-    } else if (selectedQuiz === "近世") {
-      score = '90点';
-      quiz = 'ルネサンス革命：';
-    } else if (selectedQuiz === "近代") {
-      score = '60点';
-      quiz = 'ルネサンス革命：';
-    } else if (selectedQuiz === "古代") {
-      score = '70点';
-      quiz = 'ルネサンス革命：';
-    }
+    var quizData = getQuizData(selectedQuiz);
 
     // テーブル表示を更新
     var quizTable = document.getElementById("quizTable");
     quizTable.innerHTML = ''; // テーブルをクリア
 
-    // テーブルに行を追加
-    var row = quizTable.insertRow(0);
+    // 各問題を表示
+    for (var i = 0; i < quizData.length; i++) {
+      // テーブルに行を追加
+      var row = quizTable.insertRow(i);
 
-    // セルを追加
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
+      // セルを追加
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
 
-    // セルに内容を追加
-    cell1.innerHTML = quiz;
-    cell2.innerHTML = score;
-    cell3.innerHTML = '<button onclick="showDetails()">詳細</button>';
+      // セルに内容を追加
+      cell1.innerHTML = quizData[i].question;
+      cell2.innerHTML = quizData[i].score;
+      cell3.innerHTML = '<button onclick="showDetails()">詳細</button>';
+    }
   }
 
-  function showDetails() {
-    // 詳細を表示するロジックを追加
-    alert("詳細ボタンがクリックされました！");
-    // ここに詳細表示のための処理を追加
+  function getQuizData(theme) {
+    // 各テーマごとの問題データ
+    var quizData = {
+      '中世': [
+        { question: 'ルネサンス革命1', score: '80点' },
+        { question: 'ルネサンス革命2', score: '85点' },
+        { question: 'ルネサンス革命3', score: '90点' },
+      ],
+      '近世': [
+        { question: '産業革命1', score: '75点' },
+        { question: '産業革命2', score: '80点' },
+        { question: '産業革命3', score: '85点' },
+      ],
+      '近代': [
+        { question: 'フランス革命1', score: '60点' },
+        { question: 'フランス革命2', score: '65点' },
+        { question: 'フランス革命3', score: '70点' },
+      ],
+      '古代': [
+        { question: '古代ローマ帝国1', score: '70点' },
+        { question: '古代ローマ帝国2', score: '75点' },
+        { question: '古代ローマ帝国3', score: '80点' },
+      ]
+      // 他のテーマに対する問題も追加できます
+    };
+
+    return quizData[theme] || [];
   }
+
 </script>
 </body>
 </html>
