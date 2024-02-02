@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-md-2">
                     <div class="btn-wrap">
-                        <a href="" class="btn btn-border-shadow">追加</a>
+                        <a href="{{ route('Question_Register') }}" class="btn btn-border-shadow">追加</a>
                     </div>
                 </div>
             </div>
