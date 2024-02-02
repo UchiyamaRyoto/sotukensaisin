@@ -1,46 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
-    margin: 0 auto;
-
-  }
-
-  .sentence {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-  }
-  
-  .button-container {
-    display: grid;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-  }
-  
-  .button {
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .button-1 {
-    background-color: #3498db;
-    color: #fff;
-    justify-content: center;
-
-
-  }
-  
-  .button-2 {
-    background-color: #2ecc71;
-    color: #fff;
-
-
-  }
+button{
+  width: 300px;
+  margin-top: 40px;
+  background-color: green;
+  width: 70em;
+ height:10em;
+}
+div{
+  text-align:center;
+  margin-top: 30px;
+}
+h1{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+body  {
+  background-color: lightgreen;
+}
 

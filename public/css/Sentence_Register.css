@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    margin: 50px;
+    background-color: lightgreen;
+}
+
+textarea{
+    margin-left: 270px;
+
+}
+.inputText{
+    font-size:16pt;
+
+}
+
+.sentencebutton {
+    padding: 50px 100px;
+    font-size: 16px;
+    margin-left: 350px;
+
+}
+h1 {
+    margin-left: 350px;
+}
+

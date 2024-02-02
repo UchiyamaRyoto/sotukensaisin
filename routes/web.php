@@ -37,8 +37,11 @@ Route::post('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'sto
 
 Route::get('/test2' , [App\Http\Controllers\Test\testIchiranController::class, 'index'])->name('test2.index');
 
-Route::get('/Question_Register', [App\Http\Controllers\Question_RegisterController::class, 'showQuestion_Register'])->name('Question_Register.index');
+Route::get('/Question_Register', [App\Http\Controllers\Question_RegisterController::class, 'showQuestion_Register'])->name('Question_Register');
 
-Route::get('/Sentence_Register', [App\Http\Controllers\Sentence_RegisterController::class,'showSentence_Register'])->name('Sentence_Register.index');
+Route::get('/Sentence_Register', [App\Http\Controllers\Question_RegisterController::class,'showSentence_Register'])->name('Sentence_Register');
+
+
+
 
 //Route::get('/test3' funnction(){return view('test4')});
