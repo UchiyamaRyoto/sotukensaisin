@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -28,12 +36,21 @@ Route::get('/testichiran', [App\Http\Controllers\Test\testIchiranController::cla
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'index'])->name('test.index');
 Route::post('/test' , [App\Http\Controllers\Test\QuizTextController::class, 'store'])->name('test.store');
 
 Route::get('/test2' , [App\Http\Controllers\Test\testIchiranController::class, 'index'])->name('test2.index');
 
+Route::get('/Question_Register', [App\Http\Controllers\Question_RegisterController::class, 'showQuestion_Register'])->name('Question_Register');
+
+Route::get('/Sentence_Register', [App\Http\Controllers\Question_RegisterController::class,'showSentence_Register'])->name('Sentence_Register');
+
+
+
+
+//Route::get('/test3' funnction(){return view('test4')});
 Route::get('/setting/password', [App\Http\Controllers\Auth\ChangePasswordController::class,'showChangePasswordForm'])->name('password.form');
 Route::post('/setting/password', [App\Http\Controllers\Auth\ChangePasswordController::class,'changePassword'])->name('password.change');
 
