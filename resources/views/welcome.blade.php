@@ -25,7 +25,7 @@
                 @if (Route::has('login'))
                 <div class="button-container">
                         @auth
-                            <a href="{{ url('/home') }}" class="button-home">問題画面</a>
+                            <a href="{{ route('test2') }}" class="button-home">問題画面</a>
                         @else
                             <a href="{{ route('login') }}" class="button">Log in</a>
                             <p class="aida"></p>

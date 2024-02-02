@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/testKekka.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/css/test.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
 </head>
 <body>
     <div id="app">

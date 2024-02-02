@@ -19,11 +19,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/testichiran', [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('test2');
 
 Auth::routes();
 
@@ -58,4 +58,4 @@ Route::get('/testTuika' , function () {return view('test/testTuika');})->name('t
 //内山　問題から結果への遷移
 Route::get('/testKekka' , function () {return view('test/testKekka');})->name('testKekka');
 Route::get('/test3' , [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('test3');
-Route::get('/test4' , function () {return view('test/testCheckScore');});
+Route::get('/test4' , function () {return view('test/testCheckScore');})->name('test4');

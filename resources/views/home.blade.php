@@ -1,6 +1,4 @@
 
-@section('content')
-@endsection
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -8,12 +6,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>挑戦状</title>
+
+<title>QaiZ</title>
 </head>
-<header>kokoga atama</header>
 <body>
-@extends('layouts.header')
+
 <main class = "quiz outer-block">
+    <header>
+    @include('layouts.header')
+    </header>
     <div class = "explain">
         <div class = "explain-wrap">
             <span class = "explain-text">test</span>

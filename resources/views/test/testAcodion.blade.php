@@ -1,7 +1,6 @@
 <!-- resources/views/test/testIchiran.blade.php -->
 
-
-@section('content')
+@include('layouts.header')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +29,8 @@
 
 <body>
   <header>
-  @extends('layouts.header')
   </header>
+  <main>
     <div class="section s_01">
         <div class="containerLabel">
             <div class="row">
@@ -45,7 +44,7 @@
                 </div>
             </div>
         </div>
-        @foreach($questionCollections as $collection)
+        @foreach($questionCollections ?? '' as $collection)
         <div class="accordion_one">
           <div class="accordion_header">{{ $collection->question_collection_names}}<div class="i_box"><i class="one_i"></i></div></div>
           <div class="accordion_inner">
@@ -78,7 +77,7 @@
                 </div>
             </div>
         </div>
-        @foreach($questionCollections as $collection)
+        @foreach($questionCollections ?? '' as $collection)
         <div class="accordion_one">
           <div class="accordion_header">{{ $collection->question_collection_names}}<div class="i_box"><i class="one_i"></i></div></div>
           <div class="accordion_inner">
@@ -99,10 +98,9 @@
         </div>
         @endforeach
     </div>
-
+</main>
     <script src="{{ asset('js/test2.js') }}"></script>
     <script src="{{ asset('js/test.js') }}"></script>
 
 </body>
 </html>
-@endsection

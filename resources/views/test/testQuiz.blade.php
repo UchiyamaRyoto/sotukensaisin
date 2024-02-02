@@ -1,3 +1,5 @@
+@include('layouts.header')
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,9 +12,7 @@
 <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
 </head>
 <body>
-    <header>
-        @extends('layouts.app')
-    </header>
+   
 <main class = "quiz outer-block">
     <div class = "explain">
         <div class = "explain-wrap">

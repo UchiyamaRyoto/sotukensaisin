@@ -20,7 +20,7 @@
   <title>結果確認</title>
 </head>
 <body>
-<header>@include('layouts.app')</header>
+<header>@include('layouts.header')</header>
 <div class="container mt-5">
   <h1 class="text-center mb-4">結果確認</h1>
 
