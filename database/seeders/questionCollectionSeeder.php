@@ -23,7 +23,7 @@ class questionCollectionSeeder extends Seeder
         $now = Carbon::now();
         foreach($contents as $content) {
             $info = [
-                'question_collection_name' => $content,
+                'question_collection_names' => $content,
                 'created_at' => $now,
                 'updated_at' => $now,
             ];
