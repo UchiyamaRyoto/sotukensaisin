@@ -23,19 +23,23 @@
                  <div>
                     <div class="logo">***</div>
                 @if (Route::has('login'))
-                <div class="button-container">
-                        @auth
-                            <a href="{{ route('test2') }}" class="button-home">問題画面</a>
-                        @else
-                            <a href="{{ route('login') }}" class="button">Log in</a>
-                            <p class="aida"></p>
-                            @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="button">Register</a>
-                            @endif
-                        @endauth
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="button-container">
+                                @auth
+                                    <a href="{{ route('test2') }}" class="button-home">問題画面</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="button">Log in</a>
+                                    <p class="aida"></p>
+                                    @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="button">Register</a>
+                                    @endif
+                                @endauth
+                            </div>
+                        </div>
                     </div>
-                @endif
                 </div>
+                @endif
             </p>
           </div>
 

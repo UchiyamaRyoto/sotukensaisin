@@ -16,7 +16,7 @@
             <li class="top"><a href="{{ route('home') }}">home</a></li>
             <li><a href="{{ route('test2') }}">問題選択</a></li>
             <li><a href="{{ route('test4') }}">結果確認</a></li>
-            <li><a href="#project">projects</a></li>
+            <li><a href="#project">問題追加</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
         <!-- ハンバーガーメニューここまで -->

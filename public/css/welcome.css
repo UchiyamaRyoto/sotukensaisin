@@ -60,7 +60,7 @@ text-shadow: 0 0 10px rgba(0,0,0,.4);
     align-items: baseline;
     flex-direction:row; /* Set the direction to column to align buttons vertically */
     margin-top: -50px;
-    padding-left: 370px;
+    padding-left: 33%; 
 }
 
 .aida{
