@@ -1,7 +1,9 @@
 <!-- resources/views/test/testIchiran.blade.php -->
+@include('layouts.header')
 
 <!DOCTYPE html>
 <html lang="en">
+    <header>ヘッダー</header>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +14,7 @@
 <body>
     <h1>Question Groups and Collections</h1>
 
-    @foreach($questionCollections as $collection)
+    @foreach($questionCollections ?? '' as $collection)
     <div class="test">
         <div class = "card-header p-0 position-relative mt-n4 mx-3 z-index-2" id="card">
         <div class= "box2"><h2><p>{{ $collection->question_collection_name}}</p></h2></div>
@@ -28,6 +30,7 @@
     </div>
     @endforeach
 
+    
 
 
     <script src="{{ asset('js/test.js') }}"></script>
