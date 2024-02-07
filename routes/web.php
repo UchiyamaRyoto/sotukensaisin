@@ -80,3 +80,6 @@ Route::get('/test4' , function () {return view('test/testCheckScore');})->name('
 Route::get('/adminer', function () {
     abort(404);
 });
+
+//内山　ユーザー問題追加画面への遷移
+Route::get('/otherTop', function () { return view('other/otherTop');})->name('otherTop');
