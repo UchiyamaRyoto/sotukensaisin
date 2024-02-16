@@ -28,4 +28,5 @@ class OAuthLoginController extends Controller
         }
         Auth::login($user);
         return redirect()->route('top');
+    }
 }

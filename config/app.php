@@ -229,6 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'OAuthClient2Google' => League\OAuth2\Client\Provider\Google::class,
 
     ],
 

@@ -77,3 +77,10 @@ Route::get('/adminer', function () {
 
 //内山　ユーザー問題追加画面への遷移
 Route::get('/otherTop', function () { return view('other/otherTop');})->name('otherTop');
+
+//内山　Oauth関係
+Route::get('/', [App\Http\Controllers\TopsController::class, 'index']);
+Route::get('/login/new', [App\Http\Controllers\Auth\LoginController::class, 'newly'])->name('newly');
+Route::get('/login/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'create'])->name('OAuthcreate');
+Route::get('/tops', [App\Http\Controllers\TopsController::class, 'top']);
+Route::get('/login/google', [App\Http\Controllers\OAuthLoginController::class, 'authGoogleCallback'])->name('OauthLogin');
