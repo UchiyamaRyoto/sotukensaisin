@@ -25,14 +25,17 @@
                 @if (Route::has('login'))
                 <div class="container">
                     <div class="row justify-content-center">
+                        <div class="col-md-6 text-center">
                         <div class="button-container">
                                 @auth
-                                    <a href="{{ route('test2') }}" class="button-home">問題画面</a>
+                                    <a href="{{ route('test2') }}" class="button">問題一覧</a>
+                                    <p class="aida"></p>
+                                    <a href="{{ route('otherTop') }}" class="button">ユーザー問題追加</a>
                                 @else
-                                    <a href="{{ route('login') }}" class="button">Log in</a>
+                                    <a href="{{ route('login') }}" class="button">ログイン</a>
                                     <p class="aida"></p>
                                     @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="button">Register</a>
+                                    <a href="{{ route('register') }}" class="button">新規登録</a>
                                     @endif
                                 @endauth
                             </div>
@@ -40,6 +43,7 @@
                     </div>
                 </div>
                 @endif
+            </div>
             </p>
           </div>
 
