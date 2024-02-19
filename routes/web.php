@@ -67,7 +67,7 @@ Route::get('/testQuiz', function () {return view('test/testQuiz');})->name('exam
 Route::get('/testTuika' , function () {return view('test/testTuika');})->name('testTuika');
 
 //内山　問題から結果への遷移
-Route::get('/testKekka' , function () {return view('test/testKekka');})->name('testKekka');
+Route::get('/testKekka' , [App\Http\Controllers\KekkaController::class, 'index'])->name('kekka');
 Route::get('/test3' , [App\Http\Controllers\Test\testIchiranController::class, 'index2'])->name('test3');
 Route::get('/test4' , function () {return view('test/testCheckScore');})->name('test4');
 

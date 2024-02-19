@@ -25,12 +25,25 @@
   <h1 class="text-center mb-4">結果確認</h1>
 
   <div class="form-group">
-    <label for="quizSelect">問題集を選択してください：</label>
+    <label for="quizSelect">章を選択してください：</label>
     <select class="form-control" id="quizSelect" onchange="updateScore()">
-      <option value="中世">中世</option>
-      <option value="近世">近世</option>
-      <option value="近代">近代</option>
-      <option value="古代">古代</option>
+      @foreach($categories as $category)
+      <option value="{{$category->category_names}}">{{$category->category_names}}</option>
+      @endforeach
+      <!-- 他の問題集も追加できます -->
+    </select>
+    <label for="quizSelect">節を選択してください：</label>
+    <select class="form-control" id="quizSelect" onchange="updateScore()">
+      @foreach($collections as $collection)
+      <option value="{{$collection->collection_names}}">{{$collection->collection_names}}</option>
+      @endforeach
+      <!-- 他の問題集も追加できます -->
+    </select>
+    <label for="quizSelect">問題を選択してください：</label>
+    <select class="form-control" id="quizSelect" onchange="updateScore()">
+      @foreach($questions as $question)
+      <option value="{{$question->question_names}}">{{$question->question_names}}</option>
+      @endforeach
       <!-- 他の問題集も追加できます -->
     </select>
   </div>
