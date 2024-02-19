@@ -1,20 +1,17 @@
 <!-- resources/views/test/testIchiran.blade.php -->
-
+@extends('layouts.header')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/testKekka.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/test.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
+    
     <title>Question List</title>
 </head>
 <body>
     <header>
-        @extends('layouts.app')
+      
     </header>
     <div class="tensu">
         点数：80点

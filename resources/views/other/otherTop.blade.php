@@ -9,6 +9,7 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('/css/test.css') }}">
   <link href="{{ asset('css/header.css') }}" rel="stylesheet"> 
+  <link href="{ asset('css/otherTop.css')}" rel="stylesheet">
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -17,12 +18,43 @@
   <script src="{{ asset('js/app.js') }}" defer></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
-  <title>結果確認</title>
+  <title>ユーザー問題</title>
 </head>
 <body>
 <header>@include('layouts.header')</header>
 <div class="container mt-5">
-  <h1 class="text-center mb-4">結果確認</h1>
+  <h1 class="text-center mb-4">ユーザー問題</h1>
+
+  <!-- rowクラスで検索窓とラジオボタンを囲む -->
+  <div class="row">
+    <div class="col-md-4">
+      <!-- 検索フォームの作成 -->
+      <div class="search-container">
+        <form action="/search" method="GET">
+            <input type="text" name="q" class="search-box form-control" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <!-- ボタン -->
+      <button type="submit" class="search-button btn btn-primary">検索</button>
+    </div>
+    <div class="col-md-6">
+      <!-- 大問題、章、節のラジオボタン -->
+      <div class="radio-container">
+        <label class="radio-label">
+            <input type="radio" name="category" value="major"> 章
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="category" value="chapter"> 節
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="category" value="section"> 問題
+        </label>
+      </div>
+    </div>
+  </div>
+
 
   <div class="form-group">
     <label for="quizSelect">問題集を選択してください：</label>
@@ -34,13 +66,14 @@
       <!-- 他の問題集も追加できます -->
     </select>
   </div>
+
   <!-- 2024/01/30 結果確認（仮）小島 -->
   <!-- 問題と得点のテーブル表示 -->
   <table class="table">
     <thead>
       <tr>
         <th scope="col">問題</th>
-        <th scope="col">得点</th>
+        <th scope="col">追加</th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -49,6 +82,7 @@
     </tbody>
   </table>
 </div>
+
 
 <script>
   function updateScore() {
