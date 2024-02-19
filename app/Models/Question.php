@@ -12,4 +12,7 @@ class Question extends Model
     // 20240119 加藤　作成 ********************************
 
     protected $primaryKey = 'question_id';      // 主キー変更
+
+    protected $table = 'questions';
+
 }

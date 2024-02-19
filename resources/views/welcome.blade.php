@@ -35,7 +35,11 @@
                                     <a href="{{ route('login') }}" class="button">ログイン</a>
                                     <p class="aida"></p>
                                     @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="button">新規登録</a>
+                                        <a href="{{ route('register') }}" class="button">新規登録</a>
+                                        <p class="aida"></p>
+                                        <div class="centered-link">
+                                            <a href="{{ route('newly') }}" class="">Googleでログイン</a>
+                                        </div>
                                     @endif
                                 @endif
                             </div>

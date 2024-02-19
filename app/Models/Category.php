@@ -13,4 +13,5 @@ class Category extends Model
 
     protected $primaryKey = 'category_id';      // 主キー変更
 
+    protected $table = "categories";
 }

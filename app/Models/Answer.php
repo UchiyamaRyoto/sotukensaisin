@@ -12,4 +12,6 @@ class Answer extends Model
     // 20240119 加藤　作成 *************************　
 
     protected $primaryKey = 'answer_id';        // 主キー変更
+
+    protected $table = "answers";
 }

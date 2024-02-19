@@ -133,3 +133,7 @@ a.button{
         border-bottom: 1px solid #0686b2;
         color: #fff;
     }
+
+    .centered-link {
+        text-align: center;
+    }

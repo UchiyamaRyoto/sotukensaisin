@@ -44,19 +44,22 @@
                 </div>
             </div>
         </div>
-        @foreach($questionCollections ?? '' as $collection)
+        @foreach($categories as $category)
         <div class="accordion_one">
-          <div class="accordion_header">{{ $collection->question_collection_names}}<div class="i_box"><i class="one_i"></i></div></div>
+          <div class="accordion_header">{{ $category->category_names}}<div class="i_box"><i class="one_i"></i></div></div>
           <div class="accordion_inner">
             <div class="accordion_one">
-                @foreach($questionGroups as $group)
-                @if($group->question_collection_id == $collection->id)
-              <div class="accordion_header">{{ $group->question_group_names }}<div class="i_box"><i class="one_i"></i></div></div>
+                @foreach($collections as $collection)
+                @if($collection->category_id == $category->category_id)
+              <div class="accordion_header">{{ $collection->collection_names }}<div class="i_box"><i class="one_i"></i></div></div>
                 @endif
               <div class="accordion_inner">
                 <div class="accordion_one">
-                  <div class="accordion_header">宗教改革</div>
-                  <div class="accordion_header">ルネサンス</div>
+                  @foreach($questions as $question)
+                  @if($question->collection_id == $collection->collection_id)
+                  <div class="accordion_header">{{ $question->question_names }}</div>
+                  @endif
+                  @endforeach
                 </div>
               </div>
               @endforeach
@@ -77,14 +80,14 @@
                 </div>
             </div>
         </div>
-        @foreach($questionCollections ?? '' as $collection)
+        @foreach($categories as $category)
         <div class="accordion_one">
-          <div class="accordion_header">{{ $collection->question_collection_names}}<div class="i_box"><i class="one_i"></i></div></div>
+          <div class="accordion_header">{{ $category->category_names}}<div class="i_box"><i class="one_i"></i></div></div>
           <div class="accordion_inner">
             <div class="accordion_one">
-                @foreach($questionGroups as $group)
-                @if($group->question_collection_id == $collection->id)
-              <div class="accordion_header">{{ $group->question_group_names }}<div class="i_box"><i class="one_i"></i></div></div>
+              @foreach($collections as $collection)
+              @if($collection->category_id == $category->category_id)
+              <div class="accordion_header">{{ $collection->collection_names }}<div class="i_box"><i class="one_i"></i></div></div>
                 @endif
               <div class="accordion_inner">
                 <div class="accordion_one">

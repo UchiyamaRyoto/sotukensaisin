@@ -12,4 +12,6 @@ class Collection extends Model
     // 20240119 加藤　作成
 
     protected $primaryKey = 'collection_id';        // 主キー変更
+
+    protected $table = "collections";
 }

@@ -84,3 +84,7 @@ Route::get('/login/new', [App\Http\Controllers\Auth\LoginController::class, 'new
 Route::get('/login/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'create'])->name('OAuthcreate');
 Route::get('/tops', [App\Http\Controllers\TopsController::class, 'top']);
 Route::get('/login/google', [App\Http\Controllers\OAuthLoginController::class, 'authGoogleCallback'])->name('OauthLogin');
+
+//内山　画像アップロード関係
+Route::get('/createGazou', [App\Http\Controllers\GazouController::class, 'create'])->name('gazou.create');
+Route::get('/storeGazou', [App\Http\Controllers\GazouController::class, 'store'])->name('gazou.store');

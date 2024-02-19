@@ -32,6 +32,9 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropIndex('users_email_unique');
+        });
         Schema::dropIfExists('users');
     }
 }

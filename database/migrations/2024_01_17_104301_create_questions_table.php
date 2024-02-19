@@ -17,9 +17,11 @@ class CreateQuestionsTable extends Migration
 
         Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('question_id')->unsigned();   // クエスチョンID
-            $table->string('question_sentences');               // クエスチョン文
+            $table->string('question_names', 30);               // クエスチョン名
+            $table->text('question_sentences');               // クエスチョン文
             $table->integer('question_lengths');                // クエスチョンの長さ
             $table->boolean('question_booleans');               // クエスチョン正誤
+            $table->string('question_img_path');
             $table->unsignedBigInteger('collection_id');        // コレクションID（外部キー）
             
             // ↓外部キー制約

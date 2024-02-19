@@ -21,6 +21,13 @@ class DatabaseSeeder extends Seeder
 
         //ユーザーテーブル
         $this->call(UsersTableSeeder::class);
-        
+        //カテゴリー（章）
+        $this->call(CategoriesTableSeeder::class);
+        //コレクション（説）
+        $this->call(CollectionsTableSeeder::class);
+        //クエスチョン（問）
+        $this->call(QuestionsTableSeeder::class);
+        //アンサー（答）
+        $this->call(AnswersTableSeeder::class);
     }
 }
