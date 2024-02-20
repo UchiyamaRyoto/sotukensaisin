@@ -95,3 +95,9 @@ Route::get('/storeGazou', [App\Http\Controllers\GazouController::class, 'store']
 //内山　問題設定画面への遷移
 Route::get('/questionSetting', [App\Http\Controllers\QuestionSettingController::class, 'index'])->name('questinSetting');
 Route::post('/questionSetting', [App\Http\Controllers\QuestionSettingController::class, 'update'])->name('questinSettingUpdate');
+
+//内山　画像設定画面への遷移
+Route::get('/gazouSetting', [App\Http\Controllers\GazouSettingController::class, 'index'])->name('gazouSetting');
+Route::get('/getCollections',[App\Http\Controllers\GazouSettingController::class, 'getCollections'])->name('gazouCollection'); //章を選択したら節の追加
+Route::get('/getQuestions',[App\Http\Controllers\GazouSettingController::class, 'getQuestions'])->name('gazouQuestion'); //章を選択したら節の追加
+Route::post('/gazouUpload', [App\Http\Controllers\GazouSettingController::class, 'store'])->name('gazouUpload');
