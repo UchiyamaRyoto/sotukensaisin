@@ -24,7 +24,6 @@ class CollectionsTableSeeder extends Seeder
         foreach($contents as $content) {
             $info = [
                 'collection_names' => $content,
-                'collection_sentences' => "aa",
                 'id' => 1,
                 'category_id' => 1,
                 'created_at' => $now,

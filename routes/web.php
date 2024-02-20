@@ -78,6 +78,9 @@ Route::get('/adminer', function () {
 //内山　ユーザー問題追加画面への遷移
 Route::get('/otherTop', function () { return view('other/otherTop');})->name('otherTop');
 
+//内山　結果画面への遷移
+Route::get('/testKekka2' , function () {return view('test/testKekka');})->name('testKekka2');
+
 //内山　Oauth関係
 Route::get('/', [App\Http\Controllers\TopsController::class, 'index']);
 Route::get('/login/new', [App\Http\Controllers\Auth\LoginController::class, 'newly'])->name('newly');
@@ -88,3 +91,6 @@ Route::get('/login/google', [App\Http\Controllers\OAuthLoginController::class, '
 //内山　画像アップロード関係
 Route::get('/createGazou', [App\Http\Controllers\GazouController::class, 'create'])->name('gazou.create');
 Route::get('/storeGazou', [App\Http\Controllers\GazouController::class, 'store'])->name('gazou.store');
+
+//内山　問題設定画面への遷移
+Route::get('/questionSetting', function () {return view('Question_Setting');})->name('questionSetting');

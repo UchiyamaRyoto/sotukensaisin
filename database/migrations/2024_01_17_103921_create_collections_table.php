@@ -18,9 +18,11 @@ class CreateCollectionsTable extends Migration
         Schema::create('collections', function (Blueprint $table) {
             $table->bigIncrements('collection_id');     // コレクションID
             $table->string('collection_names', 30);     // コレクション名
-            $table->text('collection_sentences');       // コレクション文
+            //$table->text('collection_sentences');       // コレクション文
             $table->unsignedBigInteger('id');           // ユーザーID（外部キー）
             $table->unsignedBigInteger('category_id');  // カテゴリーID（外部キー）
+            $table->boolean('public_flg')->default(False);
+            $table->string('image_pass')->default("");
 
             // ↓外部キー制約
             $table->foreign('id')->references('id')->on('users');

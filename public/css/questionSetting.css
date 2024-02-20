@@ -1,0 +1,17 @@
+/* styles.css */
+
+/* フォームの余白を調整 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* 問題設定のヘッダーのスタイルを調整 */
+h1 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* ボタンの間の余白を調整 */
+.btn {
+    margin-right: 10px;
+}
