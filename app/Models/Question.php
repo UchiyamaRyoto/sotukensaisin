@@ -15,4 +15,8 @@ class Question extends Model
 
     protected $table = 'questions';
 
+    protected $fillable = [
+        'public_flg',
+    ];
+
 }

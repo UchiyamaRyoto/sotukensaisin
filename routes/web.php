@@ -93,4 +93,5 @@ Route::get('/createGazou', [App\Http\Controllers\GazouController::class, 'create
 Route::get('/storeGazou', [App\Http\Controllers\GazouController::class, 'store'])->name('gazou.store');
 
 //内山　問題設定画面への遷移
-Route::get('/questionSetting', function () {return view('Question_Setting');})->name('questionSetting');
+Route::get('/questionSetting', [App\Http\Controllers\QuestionSettingController::class, 'index'])->name('questinSetting');
+Route::post('/questionSetting', [App\Http\Controllers\QuestionSettingController::class, 'update'])->name('questinSettingUpdate');

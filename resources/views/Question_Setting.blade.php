@@ -12,15 +12,18 @@
 <body>
     <div class="container">
         <h1 class="mb-4">問題設定</h1>
-        <form>
+        <form action= "/questionSetting" method= "POST">
+            @csrf
+
+            <input type="hidden" name="question_id" value="{{ $question_id }}">
             <div class="form-group">
                 <label>公開設定：</label>
                 <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" name="publicStatus" value="public" checked>
+                    <input type="radio" class="form-check-input" name="publicStatus" value=1>
                     <label class="form-check-label">公開</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" name="publicStatus" value="private">
+                    <input type="radio" class="form-check-input" name="publicStatus" value=0 checked>
                     <label class="form-check-label">非公開</label>
                 </div>
             </div>
@@ -56,8 +59,8 @@
             </div>
 
             <div class="form-group mt-4">
-                <button type="submit" class="btn btn-secondary mr-2">戻る</button>
-                <button type="submit" class="btn btn-success">完了</button>
+                <button type="submit" class="btn btn-secondary mr-2" name="returnButton">戻る</button>
+                <button type="submit" class="btn btn-success" name="completeButton">完了</button>
             </div>
         </form>
     </div>
