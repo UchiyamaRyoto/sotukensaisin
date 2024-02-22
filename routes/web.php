@@ -101,3 +101,6 @@ Route::get('/gazouSetting', [App\Http\Controllers\GazouSettingController::class,
 Route::get('/getCollections',[App\Http\Controllers\GazouSettingController::class, 'getCollections'])->name('gazouCollection'); //章を選択したら節の追加
 Route::get('/getQuestions',[App\Http\Controllers\GazouSettingController::class, 'getQuestions'])->name('gazouQuestion'); //章を選択したら節の追加
 Route::post('/gazouUpload', [App\Http\Controllers\GazouSettingController::class, 'store'])->name('gazouUpload');
+
+//結果画面のテスト
+Route::get('/testKek', [App\Http\Controllers\KekkaController::class, 'index2'])->name('testkek');

@@ -28,13 +28,13 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(range(1, 5) as $number)
+                @foreach($results as $result)
                     <tr>
-                        <td style="border: 1px solid black;">{{ $number }}</td>
-                        <td style="border: 1px solid black;">16世紀ドイツで、贖宥状を批判し、九十五か条の論題を提起したのは誰？</td>
-                        <td style="border: 1px solid black;">×</td>
-                        <td style="border: 1px solid black;">ルター</td>
-                        <td style="border: 1px solid black;">ウィクリフ</td>
+                        <td style="border: 1px solid black;">{{ $loop->iteration}}</td>
+                        <td style="border: 1px solid black;">{{ $result->answer_texts}}</td>
+                        <td style="border: 1px solid black;">{{ $result->answer_booleans}}</td>
+                        <td style="border: 1px solid black;">{{ $result->correct1}}</td>
+                        <td style="border: 1px solid black;">{{ $result->wrong1}}</td>
                     </tr>
                 @endforeach
             </tbody>
