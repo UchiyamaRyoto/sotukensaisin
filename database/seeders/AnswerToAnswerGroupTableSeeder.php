@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
-class AnswersTableSeeder extends Seeder
+class AnswerToAnswerGroupTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -26,18 +26,13 @@ class AnswersTableSeeder extends Seeder
         $l = 1;
         foreach($contents as $content) {
             $info = [
+                'answer_group_id' => 1,
                 'answer_no' => $l,
-                'answer_texts' => "16世紀ドイツで、贖宥状を批判し、九十五か条の論題を提起したのは誰？",
-                'answer_booleans' => $content,
-                'correct1' => "正解文章",
-                'wrong1' => "誤答文章1",
-                'wrong2' => "誤答文章2",
-                'wrong3' => "誤答文章3",
                 'created_at' => $now,
                 'updated_at' => $now,
             ];
             $l++;
-            DB::table('answers')->insert($info);
+            DB::table('answerToAnswerGroup')->insert($info);
         }
     }
 }

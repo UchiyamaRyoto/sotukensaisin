@@ -29,5 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call(QuestionsTableSeeder::class);
         //アンサー（答）
         $this->call(AnswersTableSeeder::class);
+        $this->call(AnswerGroupsTableSeeder::class);
+        $this->call(AnswerToAnswerGroupTableSeeder::class);
     }
 }
