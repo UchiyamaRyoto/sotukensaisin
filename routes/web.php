@@ -104,3 +104,6 @@ Route::post('/gazouUpload', [App\Http\Controllers\GazouSettingController::class,
 
 //結果画面のテスト
 Route::get('/testKek', [App\Http\Controllers\KekkaController::class, 'index2'])->name('testkek');
+
+//文章変更画面への遷移
+Route::get('/textChenge', function () { return view('Text_Chenge');})->name('textChenge');
