@@ -107,3 +107,5 @@ Route::get('/testKek', [App\Http\Controllers\KekkaController::class, 'index2'])-
 
 //文章変更画面への遷移
 Route::get('/textChenge', function () { return view('Text_Chenge');})->name('textChenge');
+
+Route::get('socketTest' , function () { return view('test/socketTest');});

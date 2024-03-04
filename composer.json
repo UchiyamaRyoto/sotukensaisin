@@ -16,6 +16,7 @@
         "league/oauth2-client": "^2.7",
         "league/oauth2-google": "^4.0",
         "livewire/livewire": "^2.12",
+        "predis/predis": "^2.2",
         "tightenco/ziggy": "^1.8"
     },
     "require-dev": {
