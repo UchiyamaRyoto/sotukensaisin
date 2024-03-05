@@ -60,12 +60,23 @@ services:
         networks:
             - sail
     redis:
-        image: 'redis:alpine'
+        image: "redis:latest"
         ports:
-         - '${FORWARD_REDIS_PORT:-6379}:6379'
+            - "6379:6379"
+        volumes:
+            - redis-data:/data
+    phpredisadmin:
+        image: erikdubbelboer/phpredisadmin:latest
+        ports:
+            - "8980:80"
+        environment:
+            - REDIS_1_HOST=redis
+        volumes:
+            - redis-data:/data
 networks:
     sail:
         driver: bridge
 volumes:
     sail-mysql:
         driver: local
+    redis-data:
